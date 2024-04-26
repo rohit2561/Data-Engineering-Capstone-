@@ -1,0 +1,18 @@
+composer global require laravel/installer
+
+laravel new library-management-system
+cd library-management-system
+
+php artisan migrate
+
+php artisan make:model Book -m
+php artisan make:model User -m
+php artisan make:model Issue -m
+
+php artisan migrate
+
+php artisan make:controller DashboardController
+php artisan make:controller BookController
+php artisan make:controller UserController
+php artisan make:controller IssueController
+

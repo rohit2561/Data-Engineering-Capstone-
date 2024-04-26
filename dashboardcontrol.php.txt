@@ -1,0 +1,17 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Models\Book; // Assuming you have a Book model
+
+class DashboardController extends Controller
+{
+    public function index()
+    {
+        $books = Book::all(); // Retrieve all books from the database
+        return view('dashboard.index', compact('books'));
+    }
+
+    // Add other methods for managing books, students, etc.
+}
